@@ -2,7 +2,7 @@
 #
 # counter.py (c) 2022
 #
-# Description:  A simple counter app to practice UI in python.
+# Description:  A simple counter app to practice UI with tkinter in python.
 #
 # Created:  01/07/2022, 16:52:02
 #
@@ -16,7 +16,15 @@ import tkinter as tk
 # ------------------------------------------------------------------------------
 #
 # ------------------------------------------------------------------------------
-#
+
+root = tk.Tk()
+
+# Places a label widget on the main window
+message = tk.Label(root, text="Counter")
+message.pack()
+root.mainloop()
+
+
 # ------------------------------------------------------------------------------
 # References
 # ------------------------------------------------------------------------------
