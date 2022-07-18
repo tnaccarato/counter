@@ -20,7 +20,10 @@ from tkinter import ttk
 def button_clicked():
     ''' Adds to the counter when button is clicked'''
     root.click_counter += 1
-    message['text'] = f"You have clicked me {root.click_counter} times!"
+    if root.click_counter == 1:
+        message['text'] = "You have clicked me 1 time!"
+    else:
+        message['text'] = f"You have clicked me {root.click_counter} times!"
 
 # ------------------------------------------------------------------------------
 
