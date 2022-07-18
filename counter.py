@@ -15,10 +15,22 @@ from tkinter import ttk
 # ------------------------------------------------------------------------------
 # Defining Classes and Functions
 # ------------------------------------------------------------------------------
-#
+
+
+def button_clicked():
+    ''' Adds to the counter when button is clicked'''
+    root.click_counter += 1
+    message['text'] = f"You have clicked me {root.click_counter} times!"
+
+
+
 # ------------------------------------------------------------------------------
 
+
 root = tk.Tk()
+
+# Defines click counter
+root.click_counter = 0
 
 # Adds a title to the window
 root.title("Counter App")
@@ -37,9 +49,13 @@ root.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
 
 
 # Adds a message to the window
-message = ttk.Label(root, text="Counter")
-
+message = ttk.Label(root)
+message['text'] = "Button has not been clicked yet!"
 message.pack()
+
+# Creates a button widget
+button = ttk.Button(root, text="Click Me", command=button_clicked)
+button.pack()
 
 root.mainloop()
 
