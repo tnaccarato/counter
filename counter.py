@@ -11,6 +11,7 @@
 # Imported Libraries
 # ------------------------------------------------------------------------------
 import tkinter as tk
+from tkinter import ttk
 # ------------------------------------------------------------------------------
 # Defining Classes and Functions
 # ------------------------------------------------------------------------------
@@ -26,7 +27,7 @@ root.title("Counter App")
 window_width = 300
 window_height = 200
 # Gets the screen dimensions
-screen_width = root.winfo_screenmmwidth()
+screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 # Finds centre point of screen
 center_x = int(screen_width/2 - window_width/2)
@@ -36,7 +37,7 @@ root.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
 
 
 # Adds a message to the window
-message = tk.Label(root, text="Counter")
+message = ttk.Label(root, text="Counter")
 
 message.pack()
 
