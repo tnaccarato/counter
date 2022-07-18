@@ -19,10 +19,29 @@ import tkinter as tk
 
 root = tk.Tk()
 
-# Places a label widget on the main window
+# Adds a title to the window
+root.title("Counter App")
+
+# Changes the size of the window
+window_width = 300
+window_height = 200
+# Gets the screen dimensions
+screen_width = root.winfo_screenmmwidth()
+screen_height = root.winfo_screenheight()
+# Finds centre point of screen
+center_x = int(screen_width/2 - window_width/2)
+center_y = int(screen_height/2 - window_height/2)
+# Sets window position to centre of screen
+root.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
+
+
+# Adds a message to the window
 message = tk.Label(root, text="Counter")
+
 message.pack()
+
 root.mainloop()
+
 
 
 # ------------------------------------------------------------------------------
